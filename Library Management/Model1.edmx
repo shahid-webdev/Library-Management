@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="libraryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="libraryModelStoreContainer">
+          <EntitySet Name="book_entry" EntityType="libraryModel.Store.book_entry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="bookissue" EntityType="libraryModel.Store.bookissue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="student_entry" EntityType="libraryModel.Store.student_entry" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="book_entry">
+          <Key>
+            <PropertyRef Name="bookid" />
+          </Key>
+          <Property Name="bookid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="varchar" MaxLength="50" />
+          <Property Name="auther1" Type="varchar" MaxLength="50" />
+          <Property Name="auther2" Type="varchar" MaxLength="50" />
+          <Property Name="subject" Type="varchar" MaxLength="50" />
+          <Property Name="publisher" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="bookissue">
+          <Key>
+            <PropertyRef Name="bookissueid" />
+          </Key>
+          <Property Name="bookissueid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="doi" Type="varchar" MaxLength="50" />
+          <Property Name="stdid" Type="int" />
+          <Property Name="fname" Type="varchar" MaxLength="50" />
+          <Property Name="mname" Type="varchar" MaxLength="50" />
+          <Property Name="lname" Type="varchar" MaxLength="50" />
+          <Property Name="classes" Type="varchar" MaxLength="50" />
+          <Property Name="bookid" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="50" />
+          <Property Name="author" Type="varchar" MaxLength="50" />
+          <Property Name="publisher" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="student_entry">
+          <Key>
+            <PropertyRef Name="stdid" />
+          </Key>
+          <Property Name="stdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="doe" Type="varchar" MaxLength="50" />
+          <Property Name="fname" Type="varchar" MaxLength="50" />
+          <Property Name="mname" Type="varchar" MaxLength="50" />
+          <Property Name="lname" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="class" Type="varchar" MaxLength="50" />
+          <Property Name="mobno" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'library.dbo.bookreturn' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="bookreturn">
+        <Property Name="bookissueid" Type="int" />
+        <Property Name="stdid" Type="int" />
+        <Property Name="class" Type="varchar" MaxLength="50" />
+        <Property Name="bookid" Type="int" />
+        <Property Name="title" Type="varchar" MaxLength="50" />
+        <Property Name="author" Type="varchar" MaxLength="50" />
+        <Property Name="publisher" Type="varchar" MaxLength="50" />
+        <Property Name="doi" Type="varchar" MaxLength="50" />
+        <Property Name="dor" Type="varchar" MaxLength="50" />
+        <Property Name="fine" Type="int" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="libraryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="libraryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="book_entry" EntityType="libraryModel.book_entry" />
+          <EntitySet Name="bookissues" EntityType="libraryModel.bookissue" />
+          <EntitySet Name="student_entry" EntityType="libraryModel.student_entry" />
+        </EntityContainer>
+        <EntityType Name="book_entry">
+          <Key>
+            <PropertyRef Name="bookid" />
+          </Key>
+          <Property Name="bookid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="auther1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="auther2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="subject" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="price" Type="Int32" />
+        </EntityType>
+        <EntityType Name="bookissue">
+          <Key>
+            <PropertyRef Name="bookissueid" />
+          </Key>
+          <Property Name="bookissueid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="doi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="stdid" Type="Int32" />
+          <Property Name="fname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="classes" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bookid" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="author" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="student_entry">
+          <Key>
+            <PropertyRef Name="stdid" />
+          </Key>
+          <Property Name="stdid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="doe" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="fname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="class" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mobno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="libraryModelStoreContainer" CdmEntityContainer="libraryEntities">
+          <EntitySetMapping Name="book_entry">
+            <EntityTypeMapping TypeName="libraryModel.book_entry">
+              <MappingFragment StoreEntitySet="book_entry">
+                <ScalarProperty Name="bookid" ColumnName="bookid" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="auther1" ColumnName="auther1" />
+                <ScalarProperty Name="auther2" ColumnName="auther2" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bookissues">
+            <EntityTypeMapping TypeName="libraryModel.bookissue">
+              <MappingFragment StoreEntitySet="bookissue">
+                <ScalarProperty Name="bookissueid" ColumnName="bookissueid" />
+                <ScalarProperty Name="doi" ColumnName="doi" />
+                <ScalarProperty Name="stdid" ColumnName="stdid" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="mname" ColumnName="mname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="classes" ColumnName="classes" />
+                <ScalarProperty Name="bookid" ColumnName="bookid" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="student_entry">
+            <EntityTypeMapping TypeName="libraryModel.student_entry">
+              <MappingFragment StoreEntitySet="student_entry">
+                <ScalarProperty Name="stdid" ColumnName="stdid" />
+                <ScalarProperty Name="doe" ColumnName="doe" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="mname" ColumnName="mname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="mobno" ColumnName="mobno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="libraryModel.book_entry" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.bookissue" Width="1.5" PointX="2.75" PointY="0.75" Height="3.1340950520833326" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.student_entry" Width="1.5" PointX="4.75" PointY="0.75" Height="1.018779296875" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

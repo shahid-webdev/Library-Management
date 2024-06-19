@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="libraryModelStoreContainer" CdmEntityContainer="libraryEntities">
+    <EntitySetMapping Name="book_entry">
+      <EntityTypeMapping TypeName="libraryModel.book_entry">
+        <MappingFragment StoreEntitySet="book_entry">
+          <ScalarProperty Name="bookid" ColumnName="bookid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="auther1" ColumnName="auther1" />
+          <ScalarProperty Name="auther2" ColumnName="auther2" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookissues">
+      <EntityTypeMapping TypeName="libraryModel.bookissue">
+        <MappingFragment StoreEntitySet="bookissue">
+          <ScalarProperty Name="bookissueid" ColumnName="bookissueid" />
+          <ScalarProperty Name="doi" ColumnName="doi" />
+          <ScalarProperty Name="stdid" ColumnName="stdid" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="classes" ColumnName="classes" />
+          <ScalarProperty Name="bookid" ColumnName="bookid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_entry">
+      <EntityTypeMapping TypeName="libraryModel.student_entry">
+        <MappingFragment StoreEntitySet="student_entry">
+          <ScalarProperty Name="stdid" ColumnName="stdid" />
+          <ScalarProperty Name="doe" ColumnName="doe" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="mobno" ColumnName="mobno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

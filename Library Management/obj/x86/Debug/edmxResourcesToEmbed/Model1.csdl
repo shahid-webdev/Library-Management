@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="libraryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="libraryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="book_entry" EntityType="libraryModel.book_entry" />
+    <EntitySet Name="bookissues" EntityType="libraryModel.bookissue" />
+    <EntitySet Name="student_entry" EntityType="libraryModel.student_entry" />
+  </EntityContainer>
+  <EntityType Name="book_entry">
+    <Key>
+      <PropertyRef Name="bookid" />
+    </Key>
+    <Property Name="bookid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="auther1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="auther2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="subject" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="price" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bookissue">
+    <Key>
+      <PropertyRef Name="bookissueid" />
+    </Key>
+    <Property Name="bookissueid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stdid" Type="Int32" />
+    <Property Name="fname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="classes" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bookid" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="author" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="student_entry">
+    <Key>
+      <PropertyRef Name="stdid" />
+    </Key>
+    <Property Name="stdid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doe" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="class" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mobno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,23 @@
+F:\New C# Project\College Projects\Library Management\Library Management\bin\Debug\Library Management.exe
+F:\New C# Project\College Projects\Library Management\Library Management\bin\Debug\Library Management.pdb
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.login.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.MDI_Form.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Properties.Resources.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library Management.csproj.GenerateResource.Cache
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library Management.exe
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library Management.pdb
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Student_Entry.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Student_modification.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Student_Delete.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Student_Search.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Entry.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Modify.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Search.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Issue.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Return.resources
+F:\New C# Project\College Projects\Library Management\Library Management\bin\Debug\Library Management.exe.config
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Book_Report.resources
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library Management.csprojResolveAssemblyReference.cache
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\RdlCompile.cache
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\RdlCompile.compiled
+F:\New C# Project\College Projects\Library Management\Library Management\obj\x86\Debug\Library_Management.Student_Report.resources

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="libraryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="libraryModelStoreContainer">
+    <EntitySet Name="book_entry" EntityType="libraryModel.Store.book_entry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="bookissue" EntityType="libraryModel.Store.bookissue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="student_entry" EntityType="libraryModel.Store.student_entry" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="book_entry">
+    <Key>
+      <PropertyRef Name="bookid" />
+    </Key>
+    <Property Name="bookid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="auther1" Type="varchar" MaxLength="50" />
+    <Property Name="auther2" Type="varchar" MaxLength="50" />
+    <Property Name="subject" Type="varchar" MaxLength="50" />
+    <Property Name="publisher" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="bookissue">
+    <Key>
+      <PropertyRef Name="bookissueid" />
+    </Key>
+    <Property Name="bookissueid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="doi" Type="varchar" MaxLength="50" />
+    <Property Name="stdid" Type="int" />
+    <Property Name="fname" Type="varchar" MaxLength="50" />
+    <Property Name="mname" Type="varchar" MaxLength="50" />
+    <Property Name="lname" Type="varchar" MaxLength="50" />
+    <Property Name="classes" Type="varchar" MaxLength="50" />
+    <Property Name="bookid" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="author" Type="varchar" MaxLength="50" />
+    <Property Name="publisher" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="student_entry">
+    <Key>
+      <PropertyRef Name="stdid" />
+    </Key>
+    <Property Name="stdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="doe" Type="varchar" MaxLength="50" />
+    <Property Name="fname" Type="varchar" MaxLength="50" />
+    <Property Name="mname" Type="varchar" MaxLength="50" />
+    <Property Name="lname" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="class" Type="varchar" MaxLength="50" />
+    <Property Name="mobno" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'library.dbo.bookreturn' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="bookreturn">
+        <Property Name="bookissueid" Type="int" />
+        <Property Name="stdid" Type="int" />
+        <Property Name="class" Type="varchar" MaxLength="50" />
+        <Property Name="bookid" Type="int" />
+        <Property Name="title" Type="varchar" MaxLength="50" />
+        <Property Name="author" Type="varchar" MaxLength="50" />
+        <Property Name="publisher" Type="varchar" MaxLength="50" />
+        <Property Name="doi" Type="varchar" MaxLength="50" />
+        <Property Name="dor" Type="varchar" MaxLength="50" />
+        <Property Name="fine" Type="int" />
+      </EntityType>-->
+</Schema>

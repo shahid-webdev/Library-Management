@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B666DFA1-E4F5-4E83-9828-169D12625A3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library_Management</RootNamespace>
+    <AssemblyName>Library Management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book Issue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Issue.Designer.cs">
+      <DependentUpon>Book Issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Report.Designer.cs">
+      <DependentUpon>Book Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Return.Designer.cs">
+      <DependentUpon>Book Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Search.Designer.cs">
+      <DependentUpon>Book Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book_Entry.Designer.cs">
+      <DependentUpon>Book_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book_Modify.Designer.cs">
+      <DependentUpon>Book_Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Form.Designer.cs">
+      <DependentUpon>MDI_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Delete.Designer.cs">
+      <DependentUpon>Student Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Report.Designer.cs">
+      <DependentUpon>Student Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Search.Designer.cs">
+      <DependentUpon>Student Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Entry.Designer.cs">
+      <DependentUpon>Student_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_modification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_modification.Designer.cs">
+      <DependentUpon>Student_modification.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Book Issue.resx">
+      <DependentUpon>Book Issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Report.resx">
+      <DependentUpon>Book Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Return.resx">
+      <DependentUpon>Book Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Search.resx">
+      <DependentUpon>Book Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book_Entry.resx">
+      <DependentUpon>Book_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book_Modify.resx">
+      <DependentUpon>Book_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Form.resx">
+      <DependentUpon>MDI_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Student Delete.resx">
+      <DependentUpon>Student Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Report.resx">
+      <DependentUpon>Student Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Search.resx">
+      <DependentUpon>Student Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Entry.resx">
+      <DependentUpon>Student_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_modification.resx">
+      <DependentUpon>Student_modification.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\libraryEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
